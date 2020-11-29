@@ -1,6 +1,3 @@
-body {
-  box-sizing: border-box;
-}
 form {
   text-align: right;
   margin-bottom: 20px;
@@ -113,5 +110,10 @@ div.extremes {
 }
 
 #gitHub {
-  margin: 10px 0 0 0;
+  display: block;
+  margin-top: 15px;
+  font-size: 10px;
+}
+#gitHub:hover {
+  color: #f79758;
 }
