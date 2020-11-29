@@ -29,12 +29,13 @@ div.today {
 div.col.principal {
   text-align: center;
 }
-div.col.center {
+#fiveDays {
   text-align: center;
   padding: 5px;
 }
 div.extremes {
   font-size: 15px;
+  text-align: left;
 }
 .selected {
   color: #0056b3;
