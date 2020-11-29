@@ -126,3 +126,6 @@ div.extremes {
   margin-top: 25px;
   font-size: 10px;
 }
+#current-location {
+  border-radius: 10px;
+}
