@@ -1,3 +1,7 @@
+body {
+  max-width: 540px;
+  margin: 0 auto;
+}
 form {
   text-align: right;
   margin-bottom: 20px;
@@ -111,10 +115,14 @@ div.extremes {
 }
 
 #gitHub {
-  display: block;
-  margin-top: 15px;
   font-size: 10px;
+  color: #0056b3;
 }
 #gitHub:hover {
   color: #f79758;
+}
+
+#pGitHub {
+  margin-top: 25px;
+  font-size: 10px;
 }
