@@ -1,0 +1,110 @@
+form {
+  text-align: right;
+  margin-bottom: 20px;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #fff;
+}
+a:hover {
+  text-decoration: none;
+}
+
+i.center {
+  font-size: 30px;
+}
+i.sun-principal {
+  font-size: 80px;
+}
+div.today {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+div.col.principal {
+  text-align: center;
+}
+div.col.center {
+  text-align: center;
+  padding: 5px;
+}
+div.extremes {
+  font-size: 15px;
+}
+.selected {
+  color: #0056b3;
+}
+.selected:hover {
+  color: #0056b3;
+}
+
+.no-selected {
+  color: #fff;
+}
+.no-selected:hover {
+  color: #0056b3;
+}
+
+.temp-principal {
+  font-size: 40px;
+  font-weight: bold;
+  box-sizing: none;
+}
+.container {
+  padding: 30px;
+  background-color: #427393;
+  color: #fff;
+  max-width: 540px;
+  position: relative;
+  top: 20px;
+  font-family: "Poppins", sans-serif;
+}
+.card {
+  border-radius: 10px;
+  color: #383838;
+  margin: none;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.search-city {
+  background-color: #f79758;
+  border: none;
+  box-shadow: 2px 2px 15px;
+  font-size: 15px;
+  padding: 0px 15px;
+  border-radius: 20px;
+}
+.card-body {
+  padding: 8px;
+}
+.city {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+.enter-city {
+  outline: none;
+  background-color: #427393;
+  border: none;
+  color: #fff;
+  text-align: center;
+}
+.units {
+  font-size: 15px;
+  position: relative;
+  top: -15px;
+}
+
+::placeholder {
+  color: #fff;
+  font-size: 15px;
+  text-align: right;
+  padding: 10px;
+}
+#celcius {
+  color: #0056b3;
+}
