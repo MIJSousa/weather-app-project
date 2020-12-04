@@ -26,6 +26,8 @@ let celcius=document.querySelector("#celcius");
 let fahr=document.querySelector("#fahr");
 celcius.innerHTML= `<span class="selected" >ºC</span>`;
 fahr.innerHTML=`<span class="no-selected">ºF</span>`;
+let iconElement=document.querySelector("#icon");
+iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
 let humidity= Math.round(response.data.main.humidity);
 let currentHumidity=document.querySelector("#humidity");
@@ -72,6 +74,7 @@ let currentWind=document.querySelector("#wind");
 let currentMinTemp=document.querySelector("#min-temp");
 let currentMaxTemp=document.querySelector("#max-temp");
 
+
 if (input.value){
 h1.innerHTML=`${input.value}`;
 }else{
@@ -82,6 +85,7 @@ h1.innerHTML=`${input.value}`;
  currentMinTemp.innerHTML="minTemp";
  currentMaxTemp.innerHTML="maxTemp";
 }
+
 let apiKey="3cd100e112e7defa0b76141c9b64f0fc";
 let city=h1.innerHTML;
 let units="metric";
