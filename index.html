@@ -21,27 +21,37 @@
         <input type="text" placeholder=" 🔎 Search for a city" autocomplete="on" class="enter-city" id="city-selector">
         <input type="submit" value="Search" class="search-city">
     </form>
-<div class="row align-items-end today">
-    <div class="col center extremes align">
+<div class="row today">
+    <div class="col center extremes align-self-center">
+         
         <h1 class="city" id="current-city" >City</h1>
-        <h6 id="currentDate">Day</h6> <br>
+        <h6 id="currentDate">Day</h6>
+      
     </div>
-    <div class="col center principal">
+    <div class="col center principal align-self-center">
         <ul>
             <li>
-            <img src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png" alt="icon" id="icon">            </li>
+            <img src="#" alt="icon" id="icon">            </li>
             <li class="temp">
             <span class="temp-principal" id="current-temp">T</span> <span class="units"><a href="#" id="celcius">ºC</a>|<a href="#" id="fahr">ºF</a></span>
             </li>
         </ul>
               </div>
-    <div class="col center extremes">
+    <div class="col center extremes align-self-center">
+        <ul>
+        <li>
         <i class="fas fa-temperature-low"></i>
-        <span id="min-temp">min</span>ºC/<span id="max-temp">max</span>ºC <br>
-        <i class="fas fa-umbrella " ></i>
-        <span id="humidity">humidity</span>% <br>
+        <span id="min-temp">min</span>ºC/<span id="max-temp">max</span>ºC
+        </li>
+        <li>
+        <i class="fas fa-umbrella "></i>
+        <span id="humidity">humidity</span>%
+        </li>
+        <li>
         <i class="fas fa-wind"></i>
         <span id="wind">wind speed</span> km/h
+        </li>
+        </ul>
     </div>
 </div>
 <div class="row">
