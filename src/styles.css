@@ -40,14 +40,14 @@ div.extremes {
   text-align: left;
 }
 .selected {
-  color: #fff;
+  color: #0056b3;
 }
 .selected:hover {
   color: #0056b3;
 }
 
 .no-selected {
-  color: #0056b3;
+  color: #fff;
 }
 .no-selected:hover {
   color: #0056b3;
