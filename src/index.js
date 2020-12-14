@@ -45,12 +45,11 @@ let maxTemp=Math.round(response.data.main.temp_max);
 let currentMaxTemp=document.querySelector("#max-temp");
 currentMaxTemp.innerHTML=`${maxTemp}`;
 }
-let tempResponse=Math.round(response.data.main.temp);
 
 function chooseFahr(event){
 event.preventDefault();
 let temperature=document.querySelector("#current-temp");
-let temp=tempResponse;
+let temp=Number(temperature.innerHTML);
 let tempFahr=Math.round((temp)*9/5+32);
 temperature.innerHTML=tempFahr;
 let celcius=document.querySelector("#celcius");
