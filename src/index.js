@@ -25,10 +25,10 @@ if (minutes<10){
 return `${hours}:${minutes}`;
 }
 
-
+let tempResponse=null;
 
 function showTemperatureCelcius(response){
-let tempResponse=Math.round(response.data.main.temp);
+tempResponse=Math.round(response.data.main.temp);
 let currentTemperature=document.querySelector("#current-temp");
 currentTemperature.innerHTML=`${tempResponse}`;
 let location=response.data.name;
@@ -63,7 +63,7 @@ currentMaxTemp.innerHTML=`${maxTemp}`;
 function chooseFahr(event){
 event.preventDefault();
 let temperature=document.querySelector("#current-temp");
-let temp=Number(temperature.innerHTML);
+let temp=`${tempResponse}`;
 let tempFahr=Math.round((temp)*9/5+32);
 temperature.innerHTML=tempFahr;
 let celcius=document.querySelector("#celcius");
