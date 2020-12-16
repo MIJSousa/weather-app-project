@@ -58,6 +58,12 @@ currentMinTemp.innerHTML=`${minTemp}`;
 let maxTemp=Math.round(response.data.main.temp_max);
 let currentMaxTemp=document.querySelector("#max-temp");
 currentMaxTemp.innerHTML=`${maxTemp}`;
+
+console.log(response.data);
+
+let description=response.data.weather[0].description;
+let currentDescription=document.querySelector("#description");
+currentDescription.innerHTML=`${description}`;
 }
 
 function chooseFahr(event){

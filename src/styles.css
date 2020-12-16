@@ -74,7 +74,9 @@ div.extremes {
 #fiveDays {
   text-align: center;
 }
-
+#description {
+  font-size: 12px;
+}
 .search-city {
   background-color: #f79758;
   border: none;
