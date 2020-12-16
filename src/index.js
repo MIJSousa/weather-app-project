@@ -140,6 +140,8 @@ let locationUrl=`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}
 
 axios.get(locationUrl).then(showTemperatureCelcius);
 
+locationUrl=`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+axios.get(locationUrl).then(showForecast);
 }
 
 function showLocationTemp() {
