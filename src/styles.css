@@ -31,10 +31,7 @@ div.today {
 div.col.principal {
   text-align: center;
 }
-#fiveDays {
-  text-align: center;
-  padding: 5px;
-}
+
 div.extremes {
   font-size: 15px;
   text-align: left;
@@ -67,12 +64,17 @@ div.extremes {
   top: 20px;
   font-family: "Poppins", sans-serif;
 }
-.card {
+
+.forecast {
   border-radius: 10px;
   color: #383838;
-  margin: none;
+  text-align: center;
   background-color: rgba(255, 255, 255, 0.5);
 }
+#fiveDays {
+  text-align: center;
+}
+
 .search-city {
   background-color: #f79758;
   border: none;
@@ -81,9 +83,7 @@ div.extremes {
   padding: 0px 15px;
   border-radius: 20px;
 }
-.card-body {
-  padding: 8px;
-}
+
 .city {
   margin-top: 20px;
   margin-bottom: 10px;

@@ -12,6 +12,20 @@ if (minutes<10){
 }
 currentDate.innerHTML=`${day} ${hours}:${minutes}`
 
+function formatHours(timestamp){
+let now=new Date(timestamp);
+let hours=now.getHours();
+if (hours<10){
+    hours=`0${hours}`
+}
+let minutes=now.getMinutes();
+if (minutes<10){
+    minutes=`0${minutes}`
+}
+return `${hours}:${minutes}`;
+}
+
+
 
 function showTemperatureCelcius(response){
 let tempResponse=Math.round(response.data.main.temp);
@@ -64,6 +78,23 @@ celcius.addEventListener("click", enterCity);
 let fahr=document.querySelector("#fahr");
 fahr.addEventListener("click", chooseFahr);
 
+function showForecast(response){
+    let forecast=null;
+    let forecastElement=document.querySelector("#fiveDays");
+    forecastElement.innerHTML=null;
+
+    for(let index=0; index<6 ;index++){
+        forecast=response.data.list[index];
+        forecastElement.innerHTML +=`
+    
+    <div class="col-2">
+        <h5>${formatHours(forecast.dt*1000)}</h5>
+        <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" alt="forecast" width="50px" />
+        <h5>${Math.round(forecast.main.temp)}ºC</h5>
+    </div>`;
+    }   
+}
+
 function enterCity(event){
 event.preventDefault();
 let input= document.querySelector("#city-selector");
@@ -92,6 +123,9 @@ let units="metric";
 let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
 axios.get(apiUrl).then(showTemperatureCelcius);
+
+apiUrl=`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}`;
+axios.get(apiUrl).then(showForecast);
 }
 
 let citySearch=document.querySelector("form");
@@ -105,6 +139,7 @@ let units="metric";
 let locationUrl=`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
 
 axios.get(locationUrl).then(showTemperatureCelcius);
+
 }
 
 function showLocationTemp() {
